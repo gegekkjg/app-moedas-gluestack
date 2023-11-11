@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
-import { Pressable, Text, TextInput, View } from "react-native";
+import { Pressable, Text, TextInput, View, Image } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import styles from "./globalStyles";
 import { AntDesign } from "@expo/vector-icons";
@@ -26,6 +26,7 @@ import {
   SelectTrigger,
 } from "@gluestack-ui/themed";
 import { Select } from "@gluestack-ui/themed";
+import conversor from "../../../assets/conv.png";
 
 export default function Main() {
   const [moedaOrigem, setMoedaOrigem] = useState("BRL");
@@ -60,6 +61,7 @@ export default function Main() {
   return (
     <Box w={"$full"} h={"$full"}>
       <Center h={"$full"} m={"$9"}>
+        <Image source={conversor}/>
         <FormControl>
           <Text style={styles.title}>Conversor de moedas</Text>
           <FormControlLabel>
