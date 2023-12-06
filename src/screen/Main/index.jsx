@@ -26,7 +26,6 @@ import {
   SelectTrigger,
 } from "@gluestack-ui/themed";
 import { Select } from "@gluestack-ui/themed";
-import conversor from "../../../assets/conv.png";
 
 export default function Main() {
   const [moedaOrigem, setMoedaOrigem] = useState("BRL");
@@ -59,9 +58,8 @@ export default function Main() {
     setMoedaDestino("USD");
   };
   return (
-    <Box w={"$full"} h={"$full"}>
-      <Center h={"$full"} m={"$9"}>
-        <Image source={conversor}/>
+    <Box p="$2" h={"#full"} w={"#full"} borderRadius={"$md"} display='flex' justifyContent='center' alignSelf='center'>
+      <Center h={"$full"}>
         <FormControl>
           <Text style={styles.title}>Conversor de moedas</Text>
           <FormControlLabel>
@@ -137,10 +135,10 @@ export default function Main() {
             />
           </Input>
           <Box>
-            <Button onPress={buscarHandle} mt={"$2"}>
+            <Button onPress={buscarHandle} mt={"$2"} bg="#27a445">
               <ButtonText>Converter</ButtonText>
             </Button>
-            <Button onPress={limparResultado} mt={"$2"}>
+            <Button onPress={limparResultado} mt={"$2"} bg="#27a445">
               <ButtonText>Limpar</ButtonText>
             </Button>
           </Box>
